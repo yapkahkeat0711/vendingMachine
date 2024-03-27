@@ -21,11 +21,12 @@ def vendingMachine(amount, price):
 prices = [3,4,5]
 names = ["a","b","c"]
 prom = ""
-total_price = 0
+
 for index, (price, name) in enumerate(zip(prices, names)):
     prom += f"{index}. Drink {name}: RM{price}\n"
 continue_loop  = True
 while continue_loop : 
+    total_price = 0
     amount = int(input("Enter Money: "))
 
     while(total_price<=amount):
@@ -45,7 +46,7 @@ while continue_loop :
         print(vendingMachine(amount, total_price))
     
     answer = input("Do you want to continue? (anykey for yes , 0 for no)")
-    if answer == 0 :
+    if answer == "0" :
         continue_loop = False
     else :
         continue_loop = True
